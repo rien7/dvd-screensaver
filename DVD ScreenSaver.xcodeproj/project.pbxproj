@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		472CF9BD2DE1508700F1915E /* SkyLightWindow in Frameworks */ = {isa = PBXBuildFile; productRef = 472CF9BC2DE1508700F1915E /* SkyLightWindow */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		472CF9AC2DE1505E00F1915E /* DVD ScreenSaver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DVD ScreenSaver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				472CF9BD2DE1508700F1915E /* SkyLightWindow in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			);
 			name = "DVD ScreenSaver";
 			packageProductDependencies = (
+				472CF9BC2DE1508700F1915E /* SkyLightWindow */,
 			);
 			productName = "DVD ScreenSaver";
 			productReference = 472CF9AC2DE1505E00F1915E /* DVD ScreenSaver.app */;
@@ -94,6 +100,9 @@
 			);
 			mainGroup = 472CF9A32DE1505E00F1915E;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				472CF9BB2DE1508700F1915E /* XCRemoteSwiftPackageReference "SkyLightWindow" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 472CF9AD2DE1505E00F1915E /* Products */;
 			projectDirPath = "";
@@ -321,6 +330,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		472CF9BB2DE1508700F1915E /* XCRemoteSwiftPackageReference "SkyLightWindow" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Lakr233/SkyLightWindow";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		472CF9BC2DE1508700F1915E /* SkyLightWindow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 472CF9BB2DE1508700F1915E /* XCRemoteSwiftPackageReference "SkyLightWindow" */;
+			productName = SkyLightWindow;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 472CF9A42DE1505E00F1915E /* Project object */;
 }

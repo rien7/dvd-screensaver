@@ -7,11 +7,41 @@
 
 import SwiftUI
 
-@main
-struct DVD_ScreenSaverApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+class MainWindow<Content: View>: NSWindow {
+    init(
+        contentRect: NSRect,
+        view: () -> Content
+    ) {
+        super.init(
+            contentRect: contentRect,
+            styleMask: [
+                .nonactivatingPanel,
+                .fullSizeContentView,
+            ],
+            backing: .buffered,
+            defer: true
+        )
+
+        isOpaque = true
+
+        backgroundColor = .clear
+        hasShadow = false
+
+        collectionBehavior.insert(.fullScreenAuxiliary)
+
+        titleVisibility = .hidden
+        titlebarAppearsTransparent = true
+
+        isMovableByWindowBackground = false
+
+        hidesOnDeactivate = false
+
+        standardWindowButton(.closeButton)?.isHidden = true
+        standardWindowButton(.miniaturizeButton)?.isHidden = true
+        standardWindowButton(.zoomButton)?.isHidden = true
+
+        contentView = NSHostingView(
+            rootView: view()
+                .ignoresSafeArea())
     }
 }
